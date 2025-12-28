@@ -3,6 +3,7 @@
 使用说明与打包指南
 依赖安装
 pip install pyqt5 pywin32 pypiwin32
+
 优化和自定义
 调整地平线位置：修改draw_horizon_line方法中的center_y值
 修改粒子数量和颜色：调整init_particles方法中的参数
@@ -13,7 +14,7 @@ pip install pyqt5 pywin32 pypiwin32
 
 然后执行:
 
-pyinstaller --onefile --windowed --icon=icon.ico anti_motion_sickness.py
+pyinstaller --onefile --windowed --icon=icon.ico OverlayWindow.py
 
 游戏兼容性注意事项
 某些全屏独占模式游戏可能需要将游戏切换到"无边框窗口"模式
