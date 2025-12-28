@@ -1,1 +1,29 @@
 # OverlayWindow
+
+使用说明与打包指南
+依赖安装
+pip install pyqt5 pywin32 pypiwin32
+优化和自定义
+调整地平线位置：修改draw_horizon_line方法中的center_y值
+修改粒子数量和颜色：调整init_particles方法中的参数
+更改透明度：调整粒子和地平线颜色中的alpha值
+打包为单EXE
+
+使用PyInstaller打包
+
+然后执行:
+
+pyinstaller --onefile --windowed --icon=icon.ico anti_motion_sickness.py
+
+游戏兼容性注意事项
+某些全屏独占模式游戏可能需要将游戏切换到"无边框窗口"模式
+如果叠加层被游戏遮挡，尝试在游戏中按Alt+Tab切出再切回
+部分反作弊系统可能限制第三方叠加，如遇问题请在游戏设置中关闭反作弊或添加程序到白名单
+功能说明
+系统托盘：程序运行后只在系统托盘显示图标
+左键单击：切换叠加层开关
+右键单击：显示菜单（启用/禁用叠加层、退出程序）
+叠加层内容：
+屏幕中央的固定蓝色地平线
+12个白色粒子，会平滑跟随鼠标移动
+全透明设计，不影响游戏视觉体验
